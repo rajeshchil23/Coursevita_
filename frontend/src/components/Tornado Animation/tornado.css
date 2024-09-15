@@ -1,0 +1,45 @@
+/* Tornado animation container */
+.tornado-animation {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    margin: auto; /* Center the tornado container */
+    overflow: hidden; /* Hide any overflowed elements */
+  }
+  
+  /* Individual skill tornado items */
+  .skill-tornado {
+    position: absolute; /* Allows positioning the skill elements absolutely */
+    width: 100px; /* Width of the circular skill items */
+    height: 100px; /* Height of the circular skill items */
+    background-color: #87CEEB; /* Light blue background for each skill */
+    border-radius: 50%; /* Make the skill items circular */
+    font-size: 18px; /* Adjust font size for skill text */
+    text-align: center; /* Center the text horizontally */
+    line-height: 100px; /* Center the text vertically by matching line-height with height */
+    color: white; /* Text color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adds a shadow to each skill for depth */
+    opacity: 0.9; /* Slight transparency for a smoother look */
+    animation: rotateSkill 10s infinite linear; /* Animation to rotate each skill infinitely */
+  }
+  
+  /* Keyframes to handle rotation of individual skills */
+  @keyframes rotateSkill {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Transition effect to make the skills move upwards */
+  @keyframes tornadoUpwards {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-500px); /* Moves the skills upwards to simulate a tornado */
+    }
+  }
+  
